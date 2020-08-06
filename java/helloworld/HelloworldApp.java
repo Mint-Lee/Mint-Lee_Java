@@ -1,3 +1,8 @@
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+
+import javax.swing.JOptionPane;
+
 public class HelloworldApp {
 	
 	public static void main(String[] args) {
@@ -9,7 +14,7 @@ public class HelloworldApp {
 		System.out.println("asdasdasd".length());
 		System.out.println(Math.PI);
 		
-		System.out.println("Hello, qwe ...bye".replace("qwe","123"));  // »ıÈ°ÄÚµù¿¡¼± [[[]]] ½èÁö¸¸ ±»ÀÌ ±×·²ÇÊ¿ä´Â¾øÀ½
+		System.out.println("Hello, qwe ...bye".replace("qwe","123"));  // ìƒí™œì½”ë”©ì—ì„  [[[]]] ì¼ì§€ë§Œ êµ³ì´ ê·¸ëŸ´í•„ìš”ëŠ”ì—†ìŒ
 		
 		int a = 1;
 		double b = 1.4;
@@ -19,11 +24,18 @@ public class HelloworldApp {
 		System.out.println(c);
 		System.out.println("Hello, "+c);
 		
-		int d = (int) 1.1; // double½á¾ßµÇÁö¸¸ int¸¦ ¾Õ¿¡ ºÙÀÌ¸é¼­ º¯È¯ÇØ¼­ Á¤¼öÇüÅÂ·Î ¸¸µë, 1Ãâ·ÂµÊ
+		int d = (int) 1.1; // doubleì¨ì•¼ë˜ì§€ë§Œ intë¥¼ ì•ì— ë¶™ì´ë©´ì„œ ë³€í™˜í•´ì„œ ì •ìˆ˜í˜•íƒœë¡œ ë§Œë“¬, 1ì¶œë ¥ë¨
 		System.out.println(d);
 		
-		String e = Integer.toString(3);  // 3 to String, 3 Á¤¼ö¸¦ ¹®ÀÚ·Î ¹Ù²Ş
-		System.out.println(e.getClass());
+		String e = Integer.toString(3);  // 3 to String, 3 ì •ìˆ˜ë¥¼ ë¬¸ìë¡œ ë°”ê¿ˆ
+		System.out.println(e.getClass());  // getClass()ëŠ” ë¬¸ìíƒ€ì…ì„ ë³´ì—¬ì¤Œ
+		
+		String id = JOptionPane.showInputDialog("Enter a ID");  //ì¸í’‹, ì‹¤í–‰í•˜ë©´ ì¸í’‹ì°½ì´ ëœ¸
+		//String id = args[0]; ì´ëŸ°ì‹ìœ¼ë¡œë„ ì“¸ìˆ˜ìˆì§€ë§Œ ë¯¸ë¦¬ ì„¤ì •í•´ë†”ì•¼ë¨.
+		
+		PrintWriter p1 = new PrintWriter("result1.txt");
+		p1.write("Hello 1");
+		p1.close();
 	}
 	
 }
